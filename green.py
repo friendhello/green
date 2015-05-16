@@ -21,6 +21,7 @@ def commit():
 
 
 def set_sys_time(year, month, day):
+    print(year)
     print('date %04d/%02d/%02d' % (year, month, day))
     os.system('date %04d/%02d/%02d' % (year, month, day))
 
@@ -35,7 +36,6 @@ def daily_commit(start_date, end_date):
     for i in range((end_date - start_date).days + 1):
         cur_date = start_date + datetime.timedelta(days=i)
         trick_commit(cur_date.year, cur_date.month, cur_date.day)
-
 
 if __name__ == '__main__':
     daily_commit(datetime.date(2015, 5, 16), datetime.date(2015, 5, 17))
