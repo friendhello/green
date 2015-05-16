@@ -21,6 +21,7 @@ def commit():
 
 
 def set_sys_time(year, month, day):
+    print('date %04d/%02d/%02d' % (year, month, day))
     os.system('date %04d/%02d/%02d' % (year, month, day))
 
 
@@ -37,4 +38,4 @@ def daily_commit(start_date, end_date):
 
 
 if __name__ == '__main__':
-    daily_commit(datetime.date(2020, 7, 20), datetime.date(2021, 11, 18))
+    daily_commit(datetime.date(2015, 5, 16), datetime.date(2015, 5, 17))
