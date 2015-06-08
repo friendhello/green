@@ -38,7 +38,7 @@ def set_sys_time(year, month, day):
     d = randomDateList(start, end, lenth).split(' ')[0].split('-')
     print(d)
     print('date %04d/%02d/%02d' % (int(d[0]), int(d[1]), int(d[2])))
-    os.system('date %04d/%02d/%02d' % (year, month, day))
+    
 
 
 def trick_commit(year, month, day):
