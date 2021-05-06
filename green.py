@@ -33,7 +33,7 @@ def commit():
 
 
 def set_sys_time():
-    start = '2020-01-01 12:12:12'
+    start = '2021-01-01 12:12:12'
     end = '2021-11-19 00:00:00'
     lenth = 10
     d = randomDateList(start, end, lenth).split(' ')[0].split('-')
