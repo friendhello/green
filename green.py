@@ -1,3 +1,4 @@
+# coding=gbk
 import datetime,random,time
 import os
 
@@ -31,18 +32,18 @@ def commit():
     os.system('git commit -a -m "test"')
 
 
-def set_sys_time(year, month, day):
+def set_sys_time():
     start = '2015-05-02 12:12:12'
     end = '2021-11-19 00:00:00'
     lenth = 10
     d = randomDateList(start, end, lenth).split(' ')[0].split('-')
     print(d)
     print('date %04d/%02d/%02d' % (int(d[0]), int(d[1]), int(d[2])))
-    
+    os.system('date %04d/%02d/%02d' % (int(d[0]), int(d[1]), int(d[2])))
 
 
 def trick_commit(year, month, day):
-    set_sys_time(year, month, day)
+    set_sys_time()
     modify()
     commit()
 
